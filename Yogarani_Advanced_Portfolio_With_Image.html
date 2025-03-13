@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogarani B - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #00A6FF;
+        }
+        h1, h2 {
+            color: #00A6FF;
+        }
+        p, li {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .download-btn {
+            display: block;
+            max-width: 250px;
+            margin: 20px auto;
+            padding: 15px;
+            font-size: 18px;
+            color: white;
+            background: #00A6FF;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .download-btn:hover {
+            background: #007ACC;
+        }
+        .card {
+            background: #222;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(255, 255, 255, 0.1);
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #00A6FF;
+            color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="theme-toggle" onclick="toggleTheme()">☀️</div>
+    <div class="container">
+        <div class="header">
+            <img src="D:\Good Sherpherd Annual Q&A\Yoga Portfolio\profile_pic.jpeg" alt="Profile Picture" class="profile-pic">
+            <h1>Yogarani B</h1>
+        </div>
+        <h2>Software Developer</h2>
+        <p class="card">A results-driven and adaptable Software Developer with a strong background in designing, developing, and maintaining software applications.</p>
+        
+        <div class="card">
+            <h2>Contact Information</h2>
+            <p>📞 Phone: 8667011571</p>
+            <p>✉ Email: Yogarani0235@gmail.com</p>
+        </div>
+        
+        <div class="card">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>C/C++, Python, SQL</li>
+                <li>Google Cloud Platform</li>
+                <li>Problem-Solving, Time Management, Team Collaboration</li>
+            </ul>
+        </div>
+        
+        <a href="D:\Good Sherpherd Annual Q&A\Yoga Portfolio\Resume.pdf" download class="download-btn">Download Resume</a>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            let icon = document.querySelector('.theme-toggle');
+            if (document.body.classList.contains('light-mode')) {
+                document.body.style.backgroundColor = '#f4f4f4';
+                document.body.style.color = '#333';
+                icon.textContent = '🌙';
+            } else {
+                document.body.style.backgroundColor = '#121212';
+                document.body.style.color = '#fff';
+                icon.textContent = '☀️';
+            }
+        }
+    </script>
+</body>
+</html>
